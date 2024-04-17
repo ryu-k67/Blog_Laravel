@@ -8,13 +8,13 @@
 </head>
 <body>
     <header>
-    <a href="/" class="site-title">簡易ブログ</a>
+    <a href="/" class="site-title plain-link">簡易ブログ</a>
         <nav class="tab">
             <ul>
                 @if (Auth::check())
-                <li><a class="tab-item{{ Request::is('home') ? ' active' : ''}}" href="{{ route('home') }}">マイページ</a></li>
-                <li><a class="tab-item{{ Request::is('articles') ? ' active' : ''}}" href="{{ route('articles.index') }}">記事検索</a></li>
-                <li><a class="tab-item{{ Request::is('bookmarks') ? ' active' : ''}}" href="{{ route('bookmarks') }}">ブックマーク</a></li>
+                <li><a class="tab-item{{ Request::is('home') ? ' active' : ''}} plain-link" href="{{ route('home') }}">マイページ</a></li>
+                <li><a class="tab-item{{ Request::is('articles') ? ' active' : ''}} plain-link" href="{{ route('articles.index') }}">記事検索</a></li>
+                <li><a class="tab-item{{ Request::is('bookmarks') ? ' active' : ''}} plain-link" href="{{ route('bookmarks') }}">ブックマーク</a></li>
                 <li>
                     <form on-submit="return confirm('ログアウトしますか？')" action="{{ route('logout') }}" method="post">
                         @csrf
@@ -22,8 +22,8 @@
                     </form>
                 </li>
                 @else 
-                <li><a href="{{ route('login') }}">ログイン</a></li>
-                <li><a href="{{ route('register') }}">会員登録</a></li>
+                <li><a href="{{ route('login') }}" class="btn plain-link">ログイン</a></li>
+                <li><a href="{{ route('register') }}" class="btn plain-link">会員登録</a></li>
                 @endif
             </ul>
         </nav>

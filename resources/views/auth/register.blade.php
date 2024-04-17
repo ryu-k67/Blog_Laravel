@@ -15,6 +15,6 @@
         <dd><input type="password" name="password_confirmation" placeholder="もう一度入力"></dd>
     </dl>
 <button type="submit">登録する</button>
-<a href="/">キャンセル</a>
+<a href="/" class="btn">キャンセル</a>
 </form>
 @endsection()

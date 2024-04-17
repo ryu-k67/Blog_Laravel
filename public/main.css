@@ -11,6 +11,14 @@ body {
     color: #fff;
 }
 
+.plain-link {
+    text-decoration: none; /* 下線をなくす */
+    /*color: inherit; /* リンクのデフォルトの色を継承する */
+    color: #007bff; /* リンクの色を青にする */
+    cursor: pointer; /* マウスカーソルをポインターに変更する */
+    font-weight: bold; /* リンクを太字にする */
+}
+
 button, .btn {
     display: inline-block;
     padding: 2px 8px;
@@ -30,7 +38,8 @@ header {
     align-items: center;
     padding: 10px 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    background: #4470b1;
+    /* background: #4470b1; */
+    background: rgb(255, 118, 33);
     color: rgba(255, 255, 255, .7);
 }
 header nav ul {
