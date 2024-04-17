@@ -6,7 +6,7 @@
     <div class="article-body">{!! nl2br(e($article->body)) !!}</div>
     @can('update', $article)
     <div class="article-control">
-        <a href="{{ route('articles.edit', $article) }}">編集</a>
+        <a href="{{ route('articles.edit', $article) }}" class="plain-link">編集</a>
         <form onsubmit="return confirm('本当に削除しますか？')" action="{{ route('articles.destroy', $article) }}" method="post">
             @csrf 
             @method('delete')
