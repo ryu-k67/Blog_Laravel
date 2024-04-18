@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookmarkController;
+use App\Http\Controllers\SearchController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,4 +34,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/articles/{article}/bookmark', [BookmarkController::class, 'store'])->name('bookmark.store');
     Route::delete('/articles/{article}/unbookmark', [BookmarkController::class, 'destroy'])->name('bookmark.destroy');
     Route::get('/bookmarks', [ArticleController::class, 'bookmark_articles'])->name('bookmarks');
+    Route::get('/search', [SearchController::class, 'search'])->name('search');
 });
